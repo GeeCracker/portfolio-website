@@ -39,10 +39,33 @@ function Landing(useWindow) {
     };
   }, []);
 
+  // get mouse position
+  const [x, setX] = useState()
+  const [y, setY] = useState()
+  useEffect(
+    () => {
+      const update = (e) => {
+        setX(e.x)
+        setY(e.y)
+      }
+      window.addEventListener('mousemove', update)
+      window.addEventListener('touchmove', update)
+      return () => {
+        window.removeEventListener('mousemove', update)
+        window.removeEventListener('touchmove', update)
+      }
+    },
+    [setX, setY]
+  )
+
+  const circle_style = {
+    top: y-25,
+    left: x-25,
+  }
 
   return (
     <>
-
+    
     <motion.div 
       class="hero-text"
       initial="hidden"
@@ -186,6 +209,8 @@ function Landing(useWindow) {
       </div>
 
     </div> 
+
+    <div class="pink_circle" style={circle_style}/>
 
     </>
   );

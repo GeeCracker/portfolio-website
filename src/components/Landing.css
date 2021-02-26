@@ -127,3 +127,12 @@
   width: 100%;
   text-align: center;
 }
+
+.pink_circle {
+  position: fixed;
+  z-index: -1;
+  border: 2px solid #FFA5AB;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
