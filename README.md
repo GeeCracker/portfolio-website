@@ -2,7 +2,7 @@
 Source code for my website hosted on github pages. Created with React.
 
 ## packages
-react router \\
+react router \n
 react text loop
 framer motion
 aos
