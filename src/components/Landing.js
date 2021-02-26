@@ -21,7 +21,7 @@ function Landing(useWindow) {
   // Scroll animation initialization
   useEffect(() => {
     AOS.init({
-      duration: 800
+      duration: 700
     });
   }, [])
 
@@ -39,7 +39,7 @@ function Landing(useWindow) {
     };
   }, []);
 
-  
+
   return (
     <>
 
@@ -87,7 +87,7 @@ function Landing(useWindow) {
     <motion.div 
       class="navbox" 
       initial="hidden"
-      animate= {scrollPosition < 100 ? "visible" : "hidden"}
+      animate= {scrollPosition < 250 ? "visible" : "hidden"}
       variants={{
         hidden: {
           marginTop: "100vh"
@@ -98,14 +98,19 @@ function Landing(useWindow) {
       }}
       transition={{ ease: "easeOut", duration: 0.75 }}
     >
-      <Link to="/me"><Boop image={pc} hoverimg={pc}/></Link>
-      <Link to="/about"><Boop image={face} hoverimg={face}/></Link>
-      <Link tp="/me"><Boop image={phone} hoverimg={phone}/></Link>
+      <Link to="/portfolio-website"><Boop image={pc} hoverimg={pc}/></Link>
+      <Link to="/portfolio-website"><Boop image={face} hoverimg={face}/></Link>
+      <Link tp="/portfolio-website"><Boop image={phone} hoverimg={phone}/></Link>
     </motion.div>
 
     <div class="screenbox" />
-
-    <div class="screenbox" data-aos="fade-in">
+    
+    <div
+      class="screenbox" 
+      data-aos="fade-in"
+      data-aos-easing="ease-in"
+      data-aos-delay="50"
+      >
 
       <div class="content-box">
         <div class="subtitle">
@@ -120,7 +125,6 @@ function Landing(useWindow) {
         <div class="about-me-text">
             Get in{" "}
             <a 
-                style={{ textDecoration: 'none' }} 
                 href="https://www.linkedin.com/in/gcarkner/"
                 target="_blank"
             >
@@ -128,7 +132,6 @@ function Landing(useWindow) {
             </a>
             {" "}or check out my{" "}
             <a 
-                style={{ textDecoration: 'none' }} 
                 href="https://github.com/GeeCracker"
                 target="_blank"
             >
@@ -140,6 +143,49 @@ function Landing(useWindow) {
       </div>
 
     </div>
+
+    <div
+      class="screenbox" 
+      data-aos="fade-in"
+      data-aos-easing="ease-in"
+      data-aos-delay="50"
+      >
+
+      <div class="content-box">
+        <div class="subtitle">
+          Here are some things I've worked on.
+        </div>
+        <div class="work-text">
+          <div class="work-row">1. <span>a geography-based anonymous social media app.</span></div>
+          <div class="work-row">2. <span>Canada's first highschool esport organization.</span></div>
+          <div class="work-row">3. <span>a streamlined journaling experience.</span></div>
+          <div class="work-row">4. <span>a gameified studying web platform.</span></div>
+          <div class="work-row">5. <span>a subversion of the traditional social media platform.</span></div>
+          <div class="work-row"><span>more →</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div
+      class="screenbox" 
+      data-aos="fade-in"
+      data-aos-easing="ease-in"
+      style={{
+        minHeight: '0px',
+        height: '60vh',
+      }}
+      >
+
+      <div class="content-box">
+        <div class="subtitle">
+          Let's <span style={{color:"#FFA5AB"}}>chat</span>!
+        </div>
+        <div class="contact-link">gcarkner@gmail.com</div>
+        <div class="contact-link">(226) 606 8671</div>
+      </div>
+
+    </div> 
 
     </>
   );
