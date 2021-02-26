@@ -12,8 +12,12 @@ const Boop = ({ timing = 150, image, hoverimg }) => {
             : `translate(0px, 30px)`,
         transition: `transform ${timing}ms`,
         backgroundColor: 'transparent',
+        backgroundImage: `url(${image})`,
+        backgroundPosition: 'center bottom',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        width: '20vw',
         height: '40vh',
-        borderWidth: 1,
     };
 
     React.useEffect(() => {
@@ -36,10 +40,6 @@ const Boop = ({ timing = 150, image, hoverimg }) => {
 
     return (
         <div onMouseEnter={trigger} style={style}>
-            { isBooped ? 
-                <img src={hoverimg} alt="nav icon"/> : 
-                <img src={image} alt="nav icon" /> 
-            }
         </div>
     );
 };
