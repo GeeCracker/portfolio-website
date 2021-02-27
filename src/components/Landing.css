@@ -126,6 +126,11 @@
 .contact-link {
   width: 100%;
   text-align: center;
+  transition: 0.5s ease;
+}
+
+.contact-link:hover {
+  font-size: 30px;
 }
 
 .pink_circle {
