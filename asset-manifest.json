@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.b45536b6.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.d45a8f5b.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.d45a8f5b.chunk.js.map",
+    "main.css": "/portfolio-website/static/css/main.cb0f80f3.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.33ae8e50.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.33ae8e50.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.a36b62df.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.a36b62df.js.map",
     "static/css/2.ec02d681.chunk.css": "/portfolio-website/static/css/2.ec02d681.chunk.css",
-    "static/js/2.d13c645e.chunk.js": "/portfolio-website/static/js/2.d13c645e.chunk.js",
-    "static/js/2.d13c645e.chunk.js.map": "/portfolio-website/static/js/2.d13c645e.chunk.js.map",
+    "static/js/2.2d0a0785.chunk.js": "/portfolio-website/static/js/2.2d0a0785.chunk.js",
+    "static/js/2.2d0a0785.chunk.js.map": "/portfolio-website/static/js/2.2d0a0785.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
     "static/css/2.ec02d681.chunk.css.map": "/portfolio-website/static/css/2.ec02d681.chunk.css.map",
-    "static/css/main.b45536b6.chunk.css.map": "/portfolio-website/static/css/main.b45536b6.chunk.css.map",
-    "static/js/2.d13c645e.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.d13c645e.chunk.js.LICENSE.txt",
+    "static/css/main.cb0f80f3.chunk.css.map": "/portfolio-website/static/css/main.cb0f80f3.chunk.css.map",
+    "static/js/2.2d0a0785.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.2d0a0785.chunk.js.LICENSE.txt",
+    "static/media/crambarry-classroom.e5fe7774.png": "/portfolio-website/static/media/crambarry-classroom.e5fe7774.png",
     "static/media/face-cropped.a1803230.png": "/portfolio-website/static/media/face-cropped.a1803230.png",
     "static/media/face.5dcc753e.png": "/portfolio-website/static/media/face.5dcc753e.png",
+    "static/media/journo-creation.47cc3dd2.png": "/portfolio-website/static/media/journo-creation.47cc3dd2.png",
+    "static/media/olae-landing.f5f15a1a.png": "/portfolio-website/static/media/olae-landing.f5f15a1a.png",
     "static/media/pc.4da95651.png": "/portfolio-website/static/media/pc.4da95651.png",
-    "static/media/phone.da6b5c12.png": "/portfolio-website/static/media/phone.da6b5c12.png"
+    "static/media/phone.da6b5c12.png": "/portfolio-website/static/media/phone.da6b5c12.png",
+    "static/media/wob-screen.e3426ed5.png": "/portfolio-website/static/media/wob-screen.e3426ed5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a36b62df.js",
     "static/css/2.ec02d681.chunk.css",
-    "static/js/2.d13c645e.chunk.js",
-    "static/css/main.b45536b6.chunk.css",
-    "static/js/main.d45a8f5b.chunk.js"
+    "static/js/2.2d0a0785.chunk.js",
+    "static/css/main.cb0f80f3.chunk.css",
+    "static/js/main.33ae8e50.chunk.js"
   ]
 }
