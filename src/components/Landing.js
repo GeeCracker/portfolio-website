@@ -13,8 +13,13 @@ import pc from '../assets/pc.png';
 import phone from '../assets/phone.png';
 import random_face from '../assets/face-cropped.png';
 
+import crambarry from '../assets/work/crambarry/crambarry-classroom.png';
+import wob from '../assets/work/wob/wob-screen.png';
+import olae from '../assets/work/olae/olae-landing.png';
+import journo from '../assets/work/journo/journo-creation.png';
+
 import Boop from './LandingNav';
-import ContactCard from './ContactCard';
+import WorkImage from './WorkImage';
 
 function Landing(useWindow) {
 
@@ -57,6 +62,22 @@ function Landing(useWindow) {
     },
     [setX, setY]
   )
+
+  // show work images state
+  const [showImage, setShowImage] = useState(false);
+  const [image, setImage] = useState();
+  const [imageHeight, setImageHeight] = useState(200);
+  const [imageWidth, setImageWidth] = useState(200);
+  const handleWorkHover = ( image, y, x ) => {
+    console.log("hover")
+    setShowImage(true);
+    setImage(image);
+    setImageHeight(y);
+    setImageWidth(x);
+  }
+  const handleWorkUnhover = () => {
+    setShowImage(false);
+  }
 
   const circle_style = {
     top: y-25,
@@ -167,6 +188,14 @@ function Landing(useWindow) {
 
     </div>
 
+    <WorkImage 
+      mouseX={x} 
+      mouseY={y} 
+      visible={showImage}
+      image={image}
+      height={imageHeight}
+      width={imageWidth}/>
+
     <div
       class="screenbox" 
       data-aos="fade-in"
@@ -179,11 +208,26 @@ function Landing(useWindow) {
           Here are some things I've worked on.
         </div>
         <div class="work-text">
-          <div class="work-row">1. <span>a geography-based anonymous social media app.</span></div>
-          <div class="work-row">2. <span>Canada's first highschool esport organization.</span></div>
-          <div class="work-row">3. <span>a streamlined journaling experience.</span></div>
-          <div class="work-row">4. <span>a gameified studying web platform.</span></div>
-          <div class="work-row">5. <span>a subversion of the traditional social media platform.</span></div>
+          <div 
+            class="work-row" 
+            onMouseEnter={ () => handleWorkHover(wob, 400, 200)}
+            onMouseLeave={handleWorkUnhover}>1. <span>a geography-based anonymous social media app.</span></div>
+          <div 
+            class="work-row" 
+            onMouseEnter={ () => handleWorkHover(olae, 300, 590)}
+            onMouseLeave={handleWorkUnhover}>2. <span>Canada's first highschool esport organization.</span></div>
+          <div 
+            class="work-row" 
+            onMouseEnter={() => handleWorkHover(journo, 300, 590)}
+            onMouseLeave={handleWorkUnhover}>3. <span>a streamlined journaling experience.</span></div>
+          <div 
+            class="work-row" 
+            onMouseEnter={() => handleWorkHover(crambarry, 300, 550)}
+            onMouseLeave={handleWorkUnhover}>4. <span>a gameified studying web platform.</span></div>
+          <div 
+            class="work-row" 
+            onMouseEnter={handleWorkHover}
+            onMouseLeave={handleWorkUnhover}>5. <span>a subversion of the traditional social media platform.</span></div>
           <div class="work-row"><span>more →</span></div>
         </div>
       </div>
