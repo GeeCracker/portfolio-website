@@ -6,7 +6,7 @@ import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
 
 import face from '../assets/face.png';
 import pc from '../assets/pc.png';
@@ -17,6 +17,7 @@ import crambarry from '../assets/work/crambarry/crambarry-classroom.png';
 import wob from '../assets/work/wob/wob-screen.png';
 import olae from '../assets/work/olae/olae-landing.png';
 import journo from '../assets/work/journo/journo-creation.png';
+import loop from '../assets/work/loop/loop-logo.png';
 
 import Boop from './LandingNav';
 import WorkImage from './WorkImage';
@@ -77,6 +78,11 @@ function Landing(useWindow) {
   }
   const handleWorkUnhover = () => {
     setShowImage(false);
+  }
+
+  const [moreNext, setMoreNext] = useState("→");
+  const moreClick = () => {
+    moreNext == "→" ? setMoreNext("to come...") : setMoreNext("→")
   }
 
   const circle_style = {
@@ -208,27 +214,37 @@ function Landing(useWindow) {
           Here are some things I've worked on.
         </div>
         <div class="work-text">
+          <Link to="/work/wob" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
             onMouseEnter={ () => handleWorkHover(wob, 400, 200)}
             onMouseLeave={handleWorkUnhover}>1. <span>a geography-based anonymous social media app.</span></div>
+          </Link>
+          <Link to="/work/olae" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
             onMouseEnter={ () => handleWorkHover(olae, 300, 590)}
             onMouseLeave={handleWorkUnhover}>2. <span>Canada's first highschool esport organization.</span></div>
+          </Link>
+          <Link to="/work/journo" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
             onMouseEnter={() => handleWorkHover(journo, 300, 590)}
             onMouseLeave={handleWorkUnhover}>3. <span>a streamlined journaling experience.</span></div>
+          </Link>
+          <Link to="/work/crambarry" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
             onMouseEnter={() => handleWorkHover(crambarry, 300, 550)}
             onMouseLeave={handleWorkUnhover}>4. <span>a gameified studying web platform.</span></div>
+          </Link>
+          <Link to="/work/loop" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
-            onMouseEnter={handleWorkHover}
+            onMouseEnter={() => handleWorkHover(loop, 140, 370)}
             onMouseLeave={handleWorkUnhover}>5. <span>a subversion of the traditional social media platform.</span></div>
-          <div class="work-row"><span>more →</span></div>
+          </Link>
+          <div class="work-row" onClick={moreClick}><span>more {moreNext}</span></div>
         </div>
       </div>
 
