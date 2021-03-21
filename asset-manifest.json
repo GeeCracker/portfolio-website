@@ -1,18 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.c1b59291.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.333b038c.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.333b038c.chunk.js.map",
+    "main.js": "/portfolio-website/static/js/main.a946b359.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.a946b359.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.a36b62df.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.a36b62df.js.map",
     "static/css/2.ec02d681.chunk.css": "/portfolio-website/static/css/2.ec02d681.chunk.css",
-    "static/js/2.f943ab99.chunk.js": "/portfolio-website/static/js/2.f943ab99.chunk.js",
-    "static/js/2.f943ab99.chunk.js.map": "/portfolio-website/static/js/2.f943ab99.chunk.js.map",
+    "static/js/2.6bce1bff.chunk.js": "/portfolio-website/static/js/2.6bce1bff.chunk.js",
+    "static/js/2.6bce1bff.chunk.js.map": "/portfolio-website/static/js/2.6bce1bff.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
     "static/css/2.ec02d681.chunk.css.map": "/portfolio-website/static/css/2.ec02d681.chunk.css.map",
     "static/css/main.c1b59291.chunk.css.map": "/portfolio-website/static/css/main.c1b59291.chunk.css.map",
-    "static/js/2.f943ab99.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.f943ab99.chunk.js.LICENSE.txt",
-    "static/media/FYF-Daily.4d4a1316.jpg": "/portfolio-website/static/media/FYF-Daily.4d4a1316.jpg",
+    "static/js/2.6bce1bff.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.6bce1bff.chunk.js.LICENSE.txt",
     "static/media/crambarry-classroom.e5fe7774.png": "/portfolio-website/static/media/crambarry-classroom.e5fe7774.png",
     "static/media/crambarry-landing.928402a1.png": "/portfolio-website/static/media/crambarry-landing.928402a1.png",
     "static/media/crambarry-opening.810953ea.png": "/portfolio-website/static/media/crambarry-opening.810953ea.png",
@@ -42,14 +41,13 @@
     "static/media/wob-pin.8c2eb061.png": "/portfolio-website/static/media/wob-pin.8c2eb061.png",
     "static/media/wob-post.06dc39e5.png": "/portfolio-website/static/media/wob-post.06dc39e5.png",
     "static/media/wob-posts.79d96b10.png": "/portfolio-website/static/media/wob-posts.79d96b10.png",
-    "static/media/wob-screen.46c41a9c.png": "/portfolio-website/static/media/wob-screen.46c41a9c.png",
-    "static/media/wobbly_wow.46a11a27.png": "/portfolio-website/static/media/wobbly_wow.46a11a27.png"
+    "static/media/wob-screen.46c41a9c.png": "/portfolio-website/static/media/wob-screen.46c41a9c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a36b62df.js",
     "static/css/2.ec02d681.chunk.css",
-    "static/js/2.f943ab99.chunk.js",
+    "static/js/2.6bce1bff.chunk.js",
     "static/css/main.c1b59291.chunk.css",
-    "static/js/main.333b038c.chunk.js"
+    "static/js/main.a946b359.chunk.js"
   ]
 }
