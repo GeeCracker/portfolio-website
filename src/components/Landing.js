@@ -82,7 +82,7 @@ function Landing(useWindow) {
 
   const [moreNext, setMoreNext] = useState("→");
   const moreClick = () => {
-    moreNext == "→" ? setMoreNext("to come...") : setMoreNext("→")
+    moreNext === "→" ? setMoreNext("to come...") : setMoreNext("→")
   }
 
   const circle_style = {
@@ -176,6 +176,7 @@ function Landing(useWindow) {
             <a 
                 href="https://www.linkedin.com/in/gcarkner/"
                 target="_blank"
+                rel="noreferrer" 
             >
                 <span>touch</span>
             </a>
@@ -183,12 +184,13 @@ function Landing(useWindow) {
             <a 
                 href="https://github.com/GeeCracker"
                 target="_blank"
+                rel="noreferrer" 
             >
                 <span>github</span>
             </a>!
         </div>
 
-        <img class="random-image" src={random_face} />
+        <img class="random-image" src={random_face} alt="an upside-down floating illustration of a face." />
       </div>
 
     </div>

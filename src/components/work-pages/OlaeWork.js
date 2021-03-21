@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import '../Landing.css';
 import './Work.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -83,17 +82,17 @@ function OlaeWork() {
         various screens.
       </div>
       <div class="image-grid">
-        <img src={landing} />
-        <img src={teams} />
-        <img src={stats} />
-        <img src={champ} />
+        <img src={landing} alt="OLAE website landing screen."/>
+        <img src={teams} alt="OLAE participating teams list."/>
+        <img src={stats} alt="OLAE website season stats page."/>
+        <img src={champ} alt="OLAE website season champion page."/>
       </div>
 
       <div class="work-subtitle">
         check it out.
       </div>
       <div class="work-contact">
-        <p><a href="https://olae.ca/" target="_blank"> - website </a></p>
+        <p><a href="https://olae.ca/" target="_blank" rel="noreferrer"> - website </a></p>
       </div>
 
       <div class="next-button">

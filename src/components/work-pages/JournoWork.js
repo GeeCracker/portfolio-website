@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import '../Landing.css';
 import './Work.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -84,19 +83,19 @@ function JournoWork() {
         various screens.
       </div>
       <div class="image-grid">
-        <img src={login} />
-        <img src={profile} />
-        <img src={creation} />
-        <img src={text} />
+        <img src={login} alt="Screenshot of website login page."/>
+        <img src={profile} alt="Screenshot of website profile page."/>
+        <img src={creation} alt="Screenshot of website journal creation page."/>
+        <img src={text} alt="Screenshot of website journal creation text question type."/>
       </div>
 
       <div class="work-subtitle">
         check it out.
       </div>
       <div class="work-contact">
-        <p><a href="https://github.com/GeeCracker/journ-o" target="_blank"> - github </a></p>
-        <p><a href="https://devpost.com/software/journ-o?ref_content=user-portfolio&ref_feature=in_progress" target="_blank"> - devpost listing</a></p>
-        <p><a href="https://www.figma.com/file/CxbggBBhXZGSb1s5nKlFzS/journ-o-QHacks2021?node-id=0%3A1" target="_blank"> - figma design file </a></p>
+        <p><a href="https://github.com/GeeCracker/journ-o" target="_blank" rel="noreferrer"> - github </a></p>
+        <p><a href="https://devpost.com/software/journ-o?ref_content=user-portfolio&ref_feature=in_progress" target="_blank" rel="noreferrer"> - devpost listing</a></p>
+        <p><a href="https://www.figma.com/file/CxbggBBhXZGSb1s5nKlFzS/journ-o-QHacks2021?node-id=0%3A1" target="_blank" rel="noreferrer"> - figma design file </a></p>
       </div>
 
       <div class="next-button">

@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import '../Landing.css';
 import './Work.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -81,9 +80,9 @@ function CramWork() {
         various screens.
       </div>
       <div class="image-grid">
-        <img src={landing} />
-        <img src={opening} />
-        <img src={classroom} />
+        <img src={landing} alt="Screenshot of the website landing page."/>
+        <img src={opening} alt="Screenshot of the website's box opening page."/>
+        <img src={classroom} alt="Screenshot of the website's classroom page."/>
       </div>
 
       <div class="work-subtitle">

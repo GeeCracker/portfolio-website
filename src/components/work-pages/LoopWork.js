@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import '../Landing.css';
 import './Work.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -88,21 +87,22 @@ function LoopWork() {
         various screens.
       </div>
       <div class="image-grid">
-        <img src={feed3} />
-        <img src={notifs} />
-        <img src={feed1} />
-        <img src={dropdown} />
-        <img src={feed2} />
-        <img src={makemenu} />
-        <img src={post} />
-        <img src={profile} />
+        <img src={feed3} alt="Loop feed screen."/>
+        <img src={notifs} alt="Notification screen."/>
+        <img src={feed1} alt="Loop feed screen 2."/>
+        <img src={dropdown} alt="Loop selection dropdown menu."/>
+        <img src={feed2} alt="Loop feed screen 3."/>
+        <img src={makemenu} alt="Creation navigation popup menu."/>
+        <img src={newpost} alt="New post creation screen."/>
+        <img src={post} alt="Loop single post screen."/>
+        <img src={profile} alt="Loop profile screen."/>
       </div>
 
       <div class="work-subtitle">
         check it out.
       </div>
       <div class="work-contact">
-        <p><a href="http://www.getloopapp.ca/" target="_blank"> - prelaunch website </a></p>
+        <p><a href="http://www.getloopapp.ca/" target="_blank" rel="noreferrer"> - prelaunch website </a></p>
       </div>
 
       <div class="next-button">

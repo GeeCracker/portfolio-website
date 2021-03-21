@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import '../Landing.css';
 import './Work.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ import onboard2 from '../../assets/work/wob/wob-onboard2.png';
 import pin from '../../assets/work/wob/wob-pin.png';
 import post from '../../assets/work/wob/wob-post.png';
 import posts from '../../assets/work/wob/wob-posts.png';
-import wow from '../../assets/work/wob/wobbly_wow.png';
+// import wow from '../../assets/work/wob/wobbly_wow.png';
 
 function WobWork() {
 
@@ -89,21 +88,21 @@ function WobWork() {
         various screens.
       </div>
       <div class="image-grid">
-        <img src={onboard} />
-        <img src={onboard2} />
-        <img src={pin} />
-        <img src={screen} />
-        <img src={posts} />
-        <img src={post} />
-        <img src={menu} />
-        <img src={newpost} />
+        <img src={onboard} alt="WOB onboarding screen 1."/>
+        <img src={onboard2} alt="WOB onboarding screen 2."/>
+        <img src={pin} alt="WOB login pin screen."/>
+        <img src={screen} alt="WOB main map screen."/>
+        <img src={posts} alt="Main map screen with a pin selected."/>
+        <img src={post} alt="WOB post popup."/>
+        <img src={menu} alt="WOB main menu."/>
+        <img src={newpost} alt="WOB new post creation screen."/>
       </div>
 
       <div class="work-subtitle">
         check it out.
       </div>
       <div class="work-contact">
-        <p><a href="https://qtma.ca/wob.html" target="_blank"> - QTMA website posting </a></p>
+        <p><a href="https://qtma.ca/wob.html" target="_blank" rel="noreferrer"> - QTMA website posting </a></p>
       </div>
 
       <div class="next-button"><span style={{textAlign: 'right'}}>
