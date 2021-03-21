@@ -168,9 +168,8 @@ function Landing(useWindow) {
         </div>
         <div class="about-me-text">
         
-          <p>Hey! I'm Graham, a second-year software development student at Queen’s University, expecting to graduate in 2023. I really like making stuff, especially apps and websites. Through my experiences working on various projects, I’ve discovered a passion for developing attractive and responsive front-end UIs. I am also a very organized developer; I love when codebases are tidy and well-documented.</p>
-          <p>My favorite technologies to work with right now are JavaScript-based frameworks like React and React Native. A lot of my recent work has focused on web and mobile front-end development, but I’m interested in getting my hand on all sorts of things. My number one goal right now is to learn as much as I can about all sorts of technologies so that I can apply that knowledge in the future.</p>
-        
+          <p>I’m a second-year software development student at Queen’s University. I really like making stuff, especially apps and websites. Through my experiences working on various projects, I’ve discovered a passion for developing attractive and responsive front-end UIs. I am also a very organized developer; I love when codebases are tidy and well-documented.</p>
+          <p>My favorite technologies to work with right now are JavaScript-based frameworks like React and React Native. A lot of my recent work has focused on web and mobile front-end development, but my number one goal right now is to learn as many technologies as I can get my hands on so that I can grow my skills. Scroll down a bit further to see some one my previous work!</p>        
         </div>
         <div class="about-me-text">
             Get in{" "}
