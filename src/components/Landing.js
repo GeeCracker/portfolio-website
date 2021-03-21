@@ -17,7 +17,7 @@ import crambarry from '../assets/work/crambarry/crambarry-classroom.png';
 import wob from '../assets/work/wob/wob-screen.png';
 import olae from '../assets/work/olae/olae-landing.png';
 import journo from '../assets/work/journo/journo-creation.png';
-import loop from '../assets/work/loop/loop-logo.png';
+import loop from '../assets/work/loop/loop-dropdown.png';
 
 import Boop from './LandingNav';
 import WorkImage from './WorkImage';
@@ -217,7 +217,7 @@ function Landing(useWindow) {
           <Link to="/work/wob" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
-            onMouseEnter={ () => handleWorkHover(wob, 400, 200)}
+            onMouseEnter={ () => handleWorkHover(wob, 400, 190)}
             onMouseLeave={handleWorkUnhover}>1. <span>a geography-based anonymous social media app.</span></div>
           </Link>
           <Link to="/work/olae" style={{textDecoration: 'none'}}>
@@ -241,7 +241,7 @@ function Landing(useWindow) {
           <Link to="/work/loop" style={{textDecoration: 'none'}}>
           <div 
             class="work-row" 
-            onMouseEnter={() => handleWorkHover(loop, 140, 370)}
+            onMouseEnter={() => handleWorkHover(loop, 400, 220)}
             onMouseLeave={handleWorkUnhover}>5. <span>a subversion of the traditional social media platform.</span></div>
           </Link>
           <div class="work-row" onClick={moreClick}><span>more {moreNext}</span></div>

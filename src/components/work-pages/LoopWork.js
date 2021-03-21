@@ -9,8 +9,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // import images
-import daily from '../../assets/work/fyf/FYF-Daily.jpg';
-import journo from '../../assets/work/journo/journo-login.png';
+import feed1 from '../../assets/work/loop/loop-feed1.png';
+import feed2 from '../../assets/work/loop/loop-feed2.png';
+import feed3 from '../../assets/work/loop/loop-feed3.png';
+import dropdown from '../../assets/work/loop/loop-dropdown.png';
+import makemenu from '../../assets/work/loop/loop-makemenu.png';
+import newpost from '../../assets/work/loop/loop-newpost.png';
+import notifs from '../../assets/work/loop/loop-notifications.png';
+import post from '../../assets/work/loop/loop-post.png';
+import profile from '../../assets/work/loop/loop-profile.png';
 
 function LoopWork() {
 
@@ -77,11 +84,19 @@ function LoopWork() {
         <p><i>Stack: React Native, Firebase, GetStreamAPI</i></p>
       </div>
 
-      {/* <div class="work-subtitle">
+      <div class="work-subtitle">
         various screens.
       </div>
       <div class="image-grid">
-      </div> */}
+        <img src={feed3} />
+        <img src={notifs} />
+        <img src={feed1} />
+        <img src={dropdown} />
+        <img src={feed2} />
+        <img src={makemenu} />
+        <img src={post} />
+        <img src={profile} />
+      </div>
 
       <div class="work-subtitle">
         check it out.
