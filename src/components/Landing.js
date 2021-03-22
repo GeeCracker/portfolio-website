@@ -70,7 +70,6 @@ function Landing(useWindow) {
   const [imageHeight, setImageHeight] = useState(200);
   const [imageWidth, setImageWidth] = useState(200);
   const handleWorkHover = ( image, y, x ) => {
-    console.log("hover")
     setShowImage(true);
     setImage(image);
     setImageHeight(y);
