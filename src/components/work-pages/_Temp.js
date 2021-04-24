@@ -10,25 +10,35 @@ import WorkTemp from './WorkTemplate';
 function Temp() {
   return (
     <WorkTemp 
-        workTitle = "Work Title"
-        workSubtitle = "Work subtitle, catchy phrase."
+        workTitle = ""
+        workSubtitle = ""
         workBody = {
             <>
-                <p>Text text text text.</p>
-                <p>Text text text text.</p>
                 <p>Text text text text.</p>
             </>
         }
         screens = {
             [
-                [champ, "alt text"],
-                [landing, "alt text"]
+                [
+                    champ, 
+                    "alt text"
+                ],
+                [
+                    landing, 
+                    "alt text"
+                ],
             ]
         }
         links = {
             [
-                ["#external-link", "external link"],
-                ["#external-link", "external link two"]
+                [
+                    "#external-link", 
+                    "external link"
+                ],
+                [
+                    "#external-link", 
+                    "external link two"
+                ],
             ]
         }
         backLink = "/work/wob" // replace with previous page
