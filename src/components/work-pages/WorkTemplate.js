@@ -63,9 +63,15 @@ const WorkTemp = ( props ) => {
   const links = []
   if(props.links){
     for (const [index, value] of props.links.entries()) {
-      links.push(
-        <p key={index}><a href={value[0]} target="_blank" rel="noreferrer"> - {value[1]} </a></p>
-      )
+      if(value[0]){
+        links.push(
+          <p key={index}><a href={value[0]} target="_blank" rel="noreferrer"> - {value[1]} </a></p>
+        )
+      } else {
+        links.push(
+          <p key={index}>{value[1]}</p>
+        )
+      }
     }
   }
 
@@ -80,6 +86,7 @@ const WorkTemp = ( props ) => {
       class="work-content-box" 
       >
       
+      {/* Name and description */}
       <div class="work-title">
         {props.workTitle}
       </div>
@@ -90,13 +97,19 @@ const WorkTemp = ( props ) => {
         {props.workBody}
       </div>
 
+      {/* Relevant images */}
+      {props.screens ? 
+      <>
       <div class="work-subtitle">
         various screens.
       </div>
       <div class="image-grid">
         {screens}
       </div>
+      </>
+      : null}
 
+      {/* Relevant links */}
       <div class="work-subtitle">
         check it out.
       </div>
@@ -105,10 +118,15 @@ const WorkTemp = ( props ) => {
       </div>
 
       <div class="next-button">
+        {props.backLink ? 
         <Link to={props.backLink} style={{textDecoration: 'none', color: 'black'}}>← back</Link>
+        : null}
+        {props.nextLink ?
         <span style={{textAlign: 'right'}}>
         <Link to={props.nextLink} style={{textDecoration: 'none', color: 'black'}}>next →</Link>
-      </span></div>
+        </span>
+        : null}
+      </div>
 
     </div>
 
