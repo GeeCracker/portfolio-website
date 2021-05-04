@@ -3,15 +3,23 @@ import { useEffect, useState } from 'react';
 import '../Landing.css';
 import './Work.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Link } from "react-router-dom";
 
-// import images
-import daily from '../../assets/work/fyf/FYF-Daily.jpg';
-import journo from '../../assets/work/journo/journo-login.png';
+const WorkTemp = ( props ) => {
+  /*  props:
+      workTitle - string - title of work
+      workSubtitle - string - subtitle, one-sentence description
+      workBody - string - body text for work
+      screens - list - 2d list of imported img variables and alt text
+        [[img, text], [img, text]...]
+      links - list - 2d list links to external websites
+        [[link, text], [link, text]...]
+      backLink - string - path to previous work page
+      nextLink - string - path to next work page
+  */
 
-function WorkTemp() {
-
+  // ===== Mouse Tracking Code =====
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,42 +48,85 @@ function WorkTemp() {
     left: x-25,
   }
 
+  // ===== Rendering Components Setup =====
+  // screens component
+  const screens = []
+  if(props.screens){
+    for (const [index, value] of props.screens.entries()) {
+      screens.push(
+        <img key={index} src={value[0]} alt={value[1]}/>
+      )
+    }
+  }
+
+  // links component
+  const links = []
+  if(props.links){
+    for (const [index, value] of props.links.entries()) {
+      if(value[0]){
+        links.push(
+          <p key={index}><a href={value[0]} target="_blank" rel="noreferrer"> - {value[1]} </a></p>
+        )
+      } else {
+        links.push(
+          <p key={index}>{value[1]}</p>
+        )
+      }
+    }
+  }
+
   return (
     <>
 
-    <div class="back-arrow">←</div>
+    <Link to="/portfolio-website" style={{textDecoration: 'none', color: 'black'}}>
+      <div class="back-arrow">← home</div>
+    </Link>
 
     <div
       class="work-content-box" 
       >
       
+      {/* Name and description */}
       <div class="work-title">
-        Work Title
+        {props.workTitle}
       </div>
       <div class="work-subtitle">
-        work subtitle, short description.
+        {props.workSubtitle}
       </div>
       <div class="work-body">
-        <p>Work body text description.</p>
+        {props.workBody}
       </div>
 
+      {/* Relevant images */}
+      {props.screens ? 
+      <>
       <div class="work-subtitle">
         various screens.
       </div>
       <div class="image-grid">
-        <img src={daily} />
-        <img src={journo} />
+        {screens}
       </div>
+      </>
+      : null}
 
+      {/* Relevant links */}
       <div class="work-subtitle">
         check it out.
       </div>
       <div class="work-contact">
-        <p> - github</p>
-        <p> - website</p>
+        {links}
       </div>
 
-      <div class="next-button">← back <span style={{textAlign: 'right'}}>next →</span></div>
+      <div class="next-button">
+        {props.backLink ? 
+        <Link to={props.backLink} style={{textDecoration: 'none', color: 'black'}}>← back</Link>
+        : null}
+        {props.nextLink ?
+        <span style={{textAlign: 'right'}}>
+        <Link to={props.nextLink} style={{textDecoration: 'none', color: 'black'}}>next →</Link>
+        </span>
+        : null}
+      </div>
 
     </div>
 

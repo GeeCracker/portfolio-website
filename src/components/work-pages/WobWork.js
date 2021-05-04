@@ -1,11 +1,4 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import '../Landing.css';
-import './Work.css';
-
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 // import images
 import onboard from '../../assets/work/wob/wob-onboard.png';
@@ -18,102 +11,69 @@ import post from '../../assets/work/wob/wob-post.png';
 import posts from '../../assets/work/wob/wob-posts.png';
 // import wow from '../../assets/work/wob/wobbly_wow.png';
 
+import WorkTemp from './WorkTemplate';
+
+// Rename component name to appropriate work title
 function WobWork() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  // get mouse position
-  const [x, setX] = useState()
-  const [y, setY] = useState()
-  useEffect(
-    () => {
-      const update = (e) => {
-        setX(e.x)
-        setY(e.y)
-      }
-      window.addEventListener('mousemove', update)
-      window.addEventListener('touchmove', update)
-      return () => {
-        window.removeEventListener('mousemove', update)
-        window.removeEventListener('touchmove', update)
-      }
-    },
-    [setX, setY]
-  )
-
-  const circle_style = {
-    top: y-25,
-    left: x-25,
-  }
-
   return (
-    <>
-
-    <Link to="/portfolio-website" style={{textDecoration: 'none', color: 'black'}}>
-      <div class="back-arrow">← home</div>
-    </Link>
-
-    <motion.div 
-      class="work-content-box" 
-      initial="hidden"
-      animate= "visible"
-      variants={{
-        hidden: {
-          opacity: 0
-        },
-        visible: {
-          opacity: 1
+    <WorkTemp 
+        workTitle = "WOB"
+        workSubtitle = "a geography-based anonymous social media."
+        workBody = {
+            <>
+              <p>Sep 2019 - Aug 2020</p>
+              <p>For the 2019-2020 season of QTMA, my team wanted to create something that didn’t exist in the world of social media. We identified a lack of authenticity and personal connection in the content posted on modern social media apps. Our solution was WOB.</p>
+              <p>Posts on WOB are directly linked to your geographical location, users can only see posts within a set radius of their location, and all posts are entirely anonymous. The goal was to create an environment where all the content you see is meaningful to you, while also encouraging the creation of authentic content through the security of anonymity.</p>
+              <p>My primary role in the development process was the design and implementation of the UI. I worked with React Native and Node to coordinate various pre-built and custom components. It was my first time working with these technologies, so I was able to learn a lot from the experience. As a result, JavaScript frameworks are my favorite technologies to work with, especially React Native.</p>
+              <p><i>Stack: React Native, Python</i></p>
+            </>
         }
-      }}
-      transition={{ ease: "easeOut", duration: 0.75 }}
-    >
-      
-      <div class="work-title">
-        WOB
-      </div>
-      <div class="work-subtitle">
-        a geography-based anonymous social media.
-      </div>
-      <div class="work-body">
-        <p>Sep 2019 - Aug 2020</p>
-        <p>For the 2019-2020 season of QTMA, my team wanted to create something that didn’t exist in the world of social media. We identified a lack of authenticity and personal connection in the content posted on modern social media apps. Our solution was WOB.</p>
-        <p>Posts on WOB are directly linked to your geographical location, users can only see posts within a set radius of their location, and all posts are entirely anonymous. The goal was to create an environment where all the content you see is meaningful to you, while also encouraging the creation of authentic content through the security of anonymity.</p>
-        <p>My primary role in the development process was the design and implementation of the UI. I worked with React Native and Node to coordinate various pre-built and custom components. It was my first time working with these technologies, so I was able to learn a lot from the experience. As a result, JavaScript frameworks are my favorite technologies to work with, especially React Native.</p>
-        <p><i>Stack: React Native, Python</i></p>
-      </div>
-
-      <div class="work-subtitle">
-        various screens.
-      </div>
-      <div class="image-grid">
-        <img src={onboard} alt="WOB onboarding screen 1."/>
-        <img src={onboard2} alt="WOB onboarding screen 2."/>
-        <img src={pin} alt="WOB login pin screen."/>
-        <img src={screen} alt="WOB main map screen."/>
-        <img src={posts} alt="Main map screen with a pin selected."/>
-        <img src={post} alt="WOB post popup."/>
-        <img src={menu} alt="WOB main menu."/>
-        <img src={newpost} alt="WOB new post creation screen."/>
-      </div>
-
-      <div class="work-subtitle">
-        check it out.
-      </div>
-      <div class="work-contact">
-        <p><a href="https://qtma.ca/wob.html" target="_blank" rel="noreferrer"> - QTMA website posting </a></p>
-      </div>
-
-      <div class="next-button"><span style={{textAlign: 'right'}}>
-        <Link to="/work/olae" style={{textDecoration: 'none', color: 'black'}}>next →</Link>
-      </span></div>
-
-      </motion.div>
-
-    <div class="pink_circle" style={circle_style}/>
-    
-    </>
+        screens = {
+            [
+                [
+                  onboard, 
+                  "WOB onboarding screen 1."
+                ],
+                [
+                  onboard2, 
+                  "WOB onboarding screen 2."
+                ],
+                [
+                  pin,
+                  "WOB login pin screen."
+                ],
+                [
+                  screen,
+                  "WOB main map screen."
+                ],
+                [
+                  posts,
+                  "Main map screen with a pin selection."
+                ],
+                [
+                  post,
+                  "WOB post popup."
+                ],
+                [
+                  menu,
+                  "WOB main menu."
+                ],
+                [
+                  newpost,
+                  "WOB new post creation screen."
+                ],
+            ]
+        }
+        links = {
+            [
+                [
+                    "https://qtma.ca/wob.html", 
+                    "QTMA website posting"
+                ]
+            ]
+        }
+        nextLink = "/work/olae" // replace with next page
+    />
   )
 
 }
